@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index.html</title>
+</head>
+<body>
+    <form action="/userInfo" method="post">
+        <p>Name:<input type="text" name="username"></p>
+        <p>Famle:<input type="text" name="sex"></p>
+        <p>E-Main:<input type="text" name="mail"></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+
+<table>
+    <tr>
+        <td>username</td>
+        <td>sex</td>
+        <td>mail</td>
+    </tr>
+    {% for i in user_list %}
+    <tr>
+        <td>{{ i.username }}</td>
+        <td>{{ i.sex }}</td>
+        <td>{{ i.email }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
